@@ -172,6 +172,7 @@
             border: 0.5px solid #737373;
             border-radius: 5px;
             outline: 0;
+            background-color: #FFFFFF;
 
             @include tablet {
                 width: 38vw;

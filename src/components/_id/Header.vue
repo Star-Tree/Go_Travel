@@ -248,6 +248,7 @@
         border-radius: 5px;
         background-color: white;
         color: #769763;
+        -webkit-appearance: none;
 
         @include tablet {
             padding: 4px 24px;
