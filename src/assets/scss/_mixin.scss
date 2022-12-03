@@ -1,0 +1,182 @@
+// logo 圖
+@mixin logo ( $logo_width, $logo_height, $logo_url ) {
+	width: $logo_width;
+	height: $logo_height;
+	background: url($logo_url) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+
+// a連結用的背景圖設定
+@mixin bgImg ($bgImg_width, $bgImg_height, $bgImg_url) {
+	width: $bgImg_width;
+	height: $bgImg_height;
+	background: url($bgImg_url) no-repeat;
+	background-size: cover;
+}
+
+// 中間水平線
+@mixin horizontalLine ( $width_ratio, $height_thickness, $bg_color, $start_ratio ) {
+	position: relative;
+
+	&::before, &::after {
+        content: "";
+		width: $width_ratio;  // 父元素多少寬度比例
+		height: $height_thickness;  // 水平線的厚度 px
+		background-color: $bg_color;
+        position: absolute;
+		top: 50%;
+	}
+
+	&::before {
+        left: $start_ratio;  // 從父元素的 左.右 多寬比例，開始畫線.
+    }
+
+    &::after {
+        right: $start_ratio;
+    }
+
+	@content
+}
+
+
+// 滑動式選單，使用時遵照定義，命名html結構。 引入時 放在css最外層。
+@mixin off-canvas ($text_color, $bg_color, $hover_bg_color) {
+	.wrap {
+		display: flex;
+		justify-content: center;
+		background-color: $bg_color;
+		position: relative;  // 以包裹 main & off-canvas 的容器作為相對支點，位移才會計算在畫面外。
+		overflow: hidden;
+
+		.main {
+			transition: all .5s;
+		}
+
+		.offCanvas {
+			width: 66.7vw;  // 滑動選單的寬度為載具尺寸的 2/3 寬度。
+			height: 100%;
+			background-color: $bg_color;
+			position: absolute;
+			position: fixed;
+			top: 0;
+			right: 0; // 從右邊滑，滑動選單的原點設為載具螢幕的最右邊。
+			transform: translateX(66.7vw); 
+			transition: all .5s;
+
+			@include tablet {
+				top: 60px;
+			}
+
+			@include mobile {
+				top: 52px;
+			}
+
+			// .close-mobileMenu {  // a  放在滑動選單中的關閉按鈕。
+			// 	@include tablet {
+			// 		display: block;
+			// 		@include bgImg (44px, 44px, "~@/assets/images/rwd/burgerMenuClose.svg");
+			// 	}
+			
+			// 	@include mobile {
+			// 		display: block;
+			// 		@include bgImg (44px, 38px, "~@/assets/images/rwd/burgerMenuClose.svg");
+			// 	}
+
+			// 	margin: 1em 1em 1em auto;
+			// }
+		}
+	}
+
+	.offCanvas_menu {  // ul
+		display: flex;
+		flex-direction: column;
+
+		li a {
+			padding: 1em 40% 1em 0;
+			text-align: right;
+			font-family: 'Open Sans';
+			letter-spacing: 0.05em;
+			color: $text_color;
+
+			span {
+				margin-right: 8px;
+				font-size: 12px;
+				font-family: 'Noto Sans TC';
+				letter-spacing: 0.1em;
+			}
+
+			@include mobile {
+				padding: 1em 2em 1em 0;
+			}
+
+			&:hover {
+				color: $bg_color;
+				background-color: $hover_bg_color;  // 利用同風格色調的反相色。
+			}
+		}
+	}
+
+	.nav .mobileMenu {  // a  放在nav中的漢堡選單按鈕。
+		display: none;
+		transition: all .3s;
+
+		@include tablet {
+			display: block;
+			position: absolute;
+			right: 16px;
+			@include bgImg (44px, 44px, "~@/assets/images/rwd/burgerMenuOpen.svg");
+
+			&.open {
+				@include bgImg (44px, 44px, "~@/assets/images/rwd/burgerMenuClose.svg");
+			}
+		}
+    
+        @include mobile {
+			display: block;
+			@include bgImg (44px, 38px, "~@/assets/images/rwd/burgerMenuOpen.svg");
+
+			&.open {
+				@include bgImg (44px, 38px, "~@/assets/images/rwd/burgerMenuClose.svg");
+			}
+		}
+    }
+
+	.open {  // 需寫 js 為 .body 動態增加 .open 類別。
+		// .main {
+		// 	transform: translateX(-66vw);
+		// }
+	   
+		.offCanvas {
+			display: block;
+			transform: translateX(0);
+		}
+	}
+}
+
+
+// 行動版 下拉式選單，使用時遵照定義，命名html結構。  引入時 放在css最外層。
+@mixin drop-down ( $top-start, $header-bg-color ) {
+	.header {
+		width: 100%;
+		background: $header-bg-color;
+		position: fixed;  // 這邊的固定是指 畫面移動時, 表頭會固定在瀏覽畫面的最上方
+		top: 0;
+
+		.header_menu {
+			max-height: 0px;    
+			overflow: hidden;
+			// 上述2行成立, 以下設定都不會顯示出來. 除非 max-height 數值有變動.
+			flex-direction: column;
+			width: 100%;
+			transition: max-height 2.3s;
+			position: absolute;
+			// 原先 header 共佔用了 $top-start 的高度, 故下拉式選單從 $top-start+1 開始.
+			margin-top: $top-start + 1px;
+			background: $header-bg-color;  // 移出原本父元素的區域, 失去繼承的背景色, 本身透明.
+		}
+	}
+}

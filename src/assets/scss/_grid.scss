@@ -1,0 +1,11 @@
+@mixin tablet {  // 平板: 最大從 1024px(iPad Pro 2018) 開始
+	@media (max-width: 1024px) {
+		@content
+	}
+}
+
+@mixin mobile {  // 手機: 最大從 767px(iPad mini 768px - 1px) 開始 
+	@media (max-width: 767px) {
+		@content
+	}
+}

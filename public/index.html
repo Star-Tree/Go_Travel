@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="台灣觀光指南 | Travel">
+    <meta name="copyright" content="版權歸屬作者"/>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="台灣觀光指南 | Travel">
+    <meta property="og:description" content="台灣觀光指南 是一個讓你找尋台灣景點、美食、活動、住宿的網站平台。">
+    <meta property="og:image" content="https://i.imgur.com/DxnV30y.png">
+    <meta property="og:image:alt" content="台灣觀光指南網站 預覽縮圖" />
+    <meta property="og:image:type" content="png" />
+    <meta property="og:url" content="https://star-tree.github.io/travel/">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>台灣觀光指南 | Travel</title>
+  </head>
+
+  <body>
+    <script>
+      (function() {
+          let redirect = sessionStorage.redirect;
+
+          delete sessionStorage.redirect;
+
+          if (redirect && redirect !== location.href) {
+              history.replaceState(null, null, redirect);
+          }
+      }) ();
+    </script>
+  
+    <noscript>
+      <strong>你目前並沒有開啟JavaScript權限，若要正常瀏覽該網站，請確認允許使用你的JavaScript權限。
+      </strong>
+    </noscript>
+
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

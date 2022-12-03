@@ -1,0 +1,136 @@
+.intro-text {
+    h3 {
+        font-size: 48px;
+        font-family: "Open Sans";
+        line-height: 65px;
+        color: #769763;
+
+        @include tablet {
+            font-size: 42px;
+            line-height: 57px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+
+    h4 {
+        font-size: 48px;
+        line-height: 70px;
+        color: #737373;
+        letter-spacing: 0.1em;
+
+        @include tablet {
+            font-size: 42px;
+            line-height: 61px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 41px;
+        }
+    }
+
+    p {
+        line-height: 23px;
+        color: #737373;
+        letter-spacing: 0.1em;
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    span {
+        margin-right: 8px;
+        line-height: 23px;
+        color: #769763;
+        letter-spacing: 0.05em;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    img {
+        display: inline-block;
+
+        &:hover {
+            transform: translateX(16px);
+            transition: 1s;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.infoPage-text {
+    span {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: #4F4F4F;
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 17px;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    h4 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 41px;
+        letter-spacing: 0.08em;
+        color: #4F4F4F;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+        }
+
+        @include horizontalLine(83%, 4px, #E7E7E7, 0%) {
+            &::before {
+                width: 0;
+            }
+
+            @include tablet {
+                &::after {
+                    width: 80%;
+                }
+            }
+
+            @media (width: 1024px) {  // iPad Pro 版型需特別支援
+                &::after {
+                    width: 85%;
+                }
+            }
+
+            @include mobile {
+                &::after {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    p, a {
+        line-height: 23px;
+        letter-spacing: 0.1em;
+        color: #737373;
+    }
+
+    h6 {
+        margin-right: 4px;
+        line-height: 23px;
+        letter-spacing: 0.1em;
+        color: #769763;
+    }
+}
