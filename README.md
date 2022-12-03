@@ -38,7 +38,7 @@
   #### Version Control: [Git](https://git-scm.com/)、[GitHub](https://github.com/)
 ---
 * ### Third-Party Library:
-  #### SHA: [jssha](https://github.com/Caligatio/jsSHA)
+  #### Querystring Parsing and Stringifying: [qs](https://github.com/ljharb/qs)
   #### Popup Boxes: [sweetalert2](https://github.com/sweetalert2/sweetalert2)
   #### Unique Identifier: [uuid](https://github.com/uuidjs/uuid)
   #### Map: [@googlemaps/js-api-loader](https://github.com/googlemaps/js-api-loader)
