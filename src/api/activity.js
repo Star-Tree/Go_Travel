@@ -10,7 +10,7 @@ async function getAuthorizationHeader() {
     const parameter = {
         grant_type: "client_credentials",
         client_id: process.env.VUE_APP_TDX_CLIENT_ID,
-        client_secret: process.env.VUE_APP_TDX_CLIENT_SECRET,
+        client_secret: process.env.VUE_APP_TDX_CLIENT_SECRET
     };
 
     const auth_url = `https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token`;
