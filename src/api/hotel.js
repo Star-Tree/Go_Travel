@@ -2,8 +2,8 @@ import axios from 'axios';
 import qs from 'qs';
 
 const tourismHotelRequest = axios.create({
-    baseURL: `https://ptx.transportdata.tw/MOTC/v2/Tourism`,
-});
+    baseURL: `https://tdx.transportdata.tw/api/basic/v2/Tourism`,
+}); 
 
 // TDX API 認證
 async function getAuthorizationHeader() {
