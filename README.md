@@ -66,17 +66,17 @@
     * ##### `apiGetOneLocationOfHotel`: Get a hotel for data in Taiwan<br><br>
 
   * #### Base URL:
-    #### from [PTX's MOTC Transport API for Tourism](https://ptx.transportdata.tw/MOTC/v2/Tourism/)
-    * ##### `https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/` : <br>
+    #### from [Transport Data eXchange(TDX) API for Tourism](https://tdx.transportdata.tw/api-service/swagger#/Tourism)
+    * ##### `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot` : <br>
       ##### Get data for landscape in Taiwan (in src/api/scenicSpot.js)
       
-    * ##### `https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/` : <br>
+    * ##### `https://tdx.transportdata.tw/api/basic/v2/Tourism/Restaurant` : <br>
       ##### Get data for food in Taiwan (in src/api/restaurant.js)
       
-    * ##### `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/` : <br>
+    * ##### `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity` : <br>
       ##### Get data for activity in Taiwan (in src/api/activity.js)
       
-    * ##### `https://ptx.transportdata.tw/MOTC/v2/Tourism/Hotel/` : 
+    * ##### `https://tdx.transportdata.tw/api/basic/v2/Tourism/Hotel` : 
       ##### Get data for hotel in Taiwan (in src/api/hotel.js)
 ---
 * ### Wireframe:
