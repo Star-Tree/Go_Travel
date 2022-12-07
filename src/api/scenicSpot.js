@@ -4,7 +4,7 @@ import qs from 'qs';
 const tourismScenicSpotRequest = axios.create({
     baseURL: `https://tdx.transportdata.tw/api/basic/v2/Tourism`,
 });
- 
+
 // TDX API 認證
 async function getAuthorizationHeader() {
     const parameter = {
@@ -35,7 +35,9 @@ async function getAuthorizationHeader() {
 
 // 找出 特定城市中的 包含特定關鍵字的景點。
 export async function getSpecifyOfLandscape (searchText="", oneCity="") {
-    return tourismScenicSpotRequest.get(`ScenicSpot/${oneCity}?$filter=contains(ScenicSpotName, '${searchText}')&$format=JSON`,
+    (oneCity === "") ? 0 : (oneCity = `/${oneCity}`)
+    
+    return tourismScenicSpotRequest.get(`ScenicSpot${oneCity}?$filter=contains(ScenicSpotName, '${searchText}')&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
         }

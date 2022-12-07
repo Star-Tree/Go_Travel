@@ -35,10 +35,12 @@ async function getAuthorizationHeader() {
 
 // 找出 特定城市中的 包含特定關鍵字的食物。
 export async function getSpecifyOfFoods (searchText="", oneCity="") {
-    return tourismRestaurantRequest.get(`Restaurant/${oneCity}?$filter=contains(RestaurantName, '${searchText}')&$format=JSON`,
+    (oneCity === "") ? 0 : (oneCity = `/${oneCity}`)
+
+    return tourismRestaurantRequest.get(`Restaurant${oneCity}?$filter=contains(RestaurantName, '${searchText}')&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
-        },
+        }
     );
 };
 

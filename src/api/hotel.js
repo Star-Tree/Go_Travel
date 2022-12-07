@@ -35,10 +35,12 @@ async function getAuthorizationHeader() {
 
 // 找出 特定城市中的 包含特定關鍵字的景點。
 export async function getSpecifyOfHotel (searchText="", oneCity="") {
-    return tourismHotelRequest.get(`Hotel/${oneCity}?$filter=contains(HotelName, '${searchText}')&$format=JSON`,
+    (oneCity === "") ? 0 : (oneCity = `/${oneCity}`)
+
+    return tourismHotelRequest.get(`Hotel${oneCity}?$filter=contains(HotelName, '${searchText}')&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
-        },
+        }
     );
 };
 
