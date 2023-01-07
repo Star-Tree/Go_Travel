@@ -1,8 +1,8 @@
 import axios from 'axios';
 import qs from 'qs';
- 
+
 const tourismScenicSpotRequest = axios.create({
-    baseURL: `https://tdx.transportdata.tw/api/basic/v2/Tourism`,
+    baseURL: `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot`,
 });
 
 // TDX API 認證
@@ -35,9 +35,7 @@ async function getAuthorizationHeader() {
 
 // 找出 特定城市中的 包含特定關鍵字的景點。
 export async function getSpecifyOfLandscape (searchText="", oneCity="") {
-    (oneCity === "") ? 0 : (oneCity = `/${oneCity}`)
-    
-    return tourismScenicSpotRequest.get(`ScenicSpot${oneCity}?$filter=contains(ScenicSpotName, '${searchText}')&$format=JSON`,
+    return tourismScenicSpotRequest.get(`${oneCity}?$filter=contains(ScenicSpotName, '${searchText}')&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
         }
@@ -46,7 +44,7 @@ export async function getSpecifyOfLandscape (searchText="", oneCity="") {
 
 // 找出 自己附近的景點。
 export async function getNearbyOfLandscape ({latitude, longitude}, distance) {
-    return tourismScenicSpotRequest.get(`ScenicSpot?$spatialFilter=nearby(${latitude}, ${longitude}, ${distance})&$format=JSON`,
+    return tourismScenicSpotRequest.get(`?$spatialFilter=nearby(${latitude}, ${longitude}, ${distance})&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
         }
@@ -55,7 +53,7 @@ export async function getNearbyOfLandscape ({latitude, longitude}, distance) {
 
 // 找出 指定編號的景點，用於 景點頁中的動態分頁。
 export async function getOneLocationOfLandscape (ScenicSpotID) {
-    return tourismScenicSpotRequest.get(`ScenicSpot?$filter=contains(ScenicSpotID, '${ScenicSpotID}')&$format=JSON`,
+    return tourismScenicSpotRequest.get(`?$filter=contains(ScenicSpotID, '${ScenicSpotID}')&$format=JSON`,
         {
             headers: await getAuthorizationHeader(),
         }

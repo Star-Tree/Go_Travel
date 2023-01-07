@@ -1,7 +1,7 @@
 export const enjoyImg = [
   {
     src: require("@/assets/images/enjoy/0.png"),
-    RestaurantID: "C3_376500000A_000791",
+    RestaurantID: "C3_376500000A_000049",
     description: "祥發海產餐廳",
   },
 
@@ -13,8 +13,8 @@ export const enjoyImg = [
 
   {
     src: require("@/assets/images/enjoy/2.png"),
-    RestaurantID: "C3_382000000A_207664",
-    description: "石碇馬告香腸",
+    RestaurantID: "C3_376530000A_000049",
+    description: "鄭記香腸",
   },
 
   {
