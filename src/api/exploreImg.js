@@ -2,13 +2,13 @@ export const exploreImg = [
     {
         src: require("@/assets/images/explore/0.svg"),
         headText: "台東金剛大道",
-        ScenicSpotID: "C1_315080500H_000236",
+        ScenicSpotID: "C1_A15010100H_000236",
     },
 
     {
         src: require("@/assets/images/explore/1.svg"),
         headText: "南投日月潭文武廟",
-        ScenicSpotID: "C1_315081100H_000110",
+        ScenicSpotID: "C1_A15010600H_000110",
     },
 
     {
@@ -38,6 +38,6 @@ export const exploreImg = [
     {
         src: require("@/assets/images/explore/6.svg"),
         headText: "水里車埕車站",
-        ScenicSpotID: "C1_315081100H_000196",
+        ScenicSpotID: "C1_A15010600H_000196",
     },
 ];
