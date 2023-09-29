@@ -21,7 +21,7 @@
         </div>
 
         <p class="footer_copyright_PC">
-            Source from 中華民國交通部 public transport data eXchange(PTX)<br />
+            Source from 中華民國交通部 public transport data eXchange(TDX)<br />
             Copyright © 2022 Travel. All rights reserved. <br class="brOfMobile" />
             Design by Lola Lin, Front Developed by Rex Wang.
         </p>
