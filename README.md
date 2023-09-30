@@ -24,7 +24,7 @@
     </div>
 ---
 * ### Copyright:
-  #### Front-End Developer: [Rex Wang](https://www.facebook.com/RexWang0315/)
+  #### Front-End Developer: [Rex Wang](https://www.linkedin.com/in/lian-cheng-wang/)
   #### Designer: [Lola Lin](https://www.facebook.com/lolalin225) [(Behance)](https://www.behance.net/chikoriri0225?fbclid=IwAR0V9LvdHlqGDgtrcnG_N2-leNw0N7H81gmfxctMVHep9gdVvG3DCfesVIc&)
   #### Source: [Public Transport Data eXchange(TDX) of the Ministry of Communications of the Republic of China](https://tdx.transportdata.tw/)
 ---
