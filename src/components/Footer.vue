@@ -35,7 +35,7 @@
         </div>
 
         <p class="footer_copyright_mobile">
-            Source from 中華民國交通部 (PTX)<br />
+            Source from 中華民國交通部 (TDX)<br />
             Copyright © 2022 Travel. All rights reserved. <br class="brOfMobile" />
             Design by Lola, Front Developed by Rex.
         </p>
