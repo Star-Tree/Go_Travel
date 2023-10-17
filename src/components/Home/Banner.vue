@@ -64,9 +64,6 @@
             :src="item.src" :alt="item.description"
         >
 
-        <a @click="nextImg()" class="nextImg" href="javascript:;" title="下一張"></a>
-        <a @click="prevImg()" class="prevImg" href="javascript:;" title="上一張"></a>
-
         <div class="banner_main">
             <h2>遠離日常喧囂<br />
                 讓旅行豐富你的生活
@@ -80,6 +77,9 @@
                 <input type="submit" class="submit" value=" " title="按下可搜尋"
                        @click.prevent="gotoPageOfLandscape"
                 />
+
+                <a @click="nextImg()" class="nextImg" href="javascript:;" title="下一張"></a>
+                <a @click="prevImg()" class="prevImg" href="javascript:;" title="上一張"></a>
             </form>
         </div>
     </div>
@@ -95,48 +95,6 @@
 
             @include tablet {
                 height: 85vh;
-            }
-        }
-
-        .nextImg {
-            @include bgImg(48px, 48px, "~@/assets/images/banner/next_arrow.png");
-            position: absolute;
-            top: 58%;
-            right: 1%;
-
-            @include tablet {
-                @include bgImg(32px, 32px, "~@/assets/images/banner/next_arrow.png");
-                top: 51%;
-            }
-
-            @include mobile {
-                @include bgImg(16px, 16px, "~@/assets/images/banner/next_arrow.png");
-                top: 50%;
-            }
-
-            @media (width: 820px) { // iPad Air
-                top: 49%;
-            }
-        }
-
-        .prevImg {
-            @include bgImg(48px, 48px, "~@/assets/images/banner/prev_arrow.png");
-            position: absolute;
-            top: 58%;
-            left: 1%;
-
-            @include tablet {
-                @include bgImg(32px, 32px, "~@/assets/images/banner/prev_arrow.png");
-                top: 51%;
-            }
-
-            @include mobile {
-                @include bgImg(16px, 16px, "~@/assets/images/banner/prev_arrow.png");
-                top: 50%;
-            }
-
-            @media (width: 820px) { // iPad Air
-                top: 49%;
             }
         }
     }
@@ -176,53 +134,86 @@
                 line-height: 41px;
             }
         }
+    }
 
-        .banner_main_searchBlock { // form
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 37px 20px 32px;
-            border-radius: 5px;
+    .banner_main_searchBlock { // form
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 37px 20px 32px;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        position: relative;
+
+        @include tablet {
+            padding: 18px 44px 18px 32px;
+        }
+
+        @include mobile {
+            padding: 10px 36px 10px 24px;
+        }
+
+        .search {
+            width: 98%;
+            line-height: 23px;
+            letter-spacing: 0.1em;
+            color: black;
             background-color: #FFFFFF;
+            border-style: none;
+            outline: 0;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: #FFFFFF;
+            
+            &::placeholder {
+                line-height: 23px;
+                letter-spacing: 0.1em;
+                color: #ACACAC;
+                -webkit-appearance: none;
+            }
+        }
+
+        input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+
+        .submit {
+            @include bgImg(20px, 20px, "~@/assets/images/searchBanner.svg");
+            border-style: none;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nextImg {
+            @include bgImg(48px, 48px, "~@/assets/images/banner/next_arrow.png");
+            position: absolute;
+            left: 160%;
 
             @include tablet {
-                padding: 18px 44px 18px 32px;
+                @include bgImg(32px, 32px, "~@/assets/images/banner/next_arrow.png");
+                left: 120%;
             }
 
             @include mobile {
-                padding: 10px 36px 10px 24px;
+                @include bgImg(16px, 16px, "~@/assets/images/banner/next_arrow.png");
+                left: 105%;
+            }
+        }
+
+        .prevImg {
+            @include bgImg(48px, 48px, "~@/assets/images/banner/prev_arrow.png");
+            position: absolute;
+            right: 160%;
+
+            @include tablet {
+                @include bgImg(32px, 32px, "~@/assets/images/banner/prev_arrow.png");
+                right: 120%;
             }
 
-            .search {
-                width: 98%;
-                line-height: 23px;
-                letter-spacing: 0.1em;
-                color: black;
-                background-color: #FFFFFF;
-                border-style: none;
-                outline: 0;
-                -webkit-appearance: none;
-                -webkit-tap-highlight-color: #FFFFFF;
-                
-                &::placeholder {
-                    line-height: 23px;
-                    letter-spacing: 0.1em;
-                    color: #ACACAC;
-                    -webkit-appearance: none;
-                }
-            }
-
-            input[type="search"]::-webkit-search-cancel-button {
-                -webkit-appearance: none;
-            }
-
-            .submit {
-                @include bgImg(20px, 20px, "~@/assets/images/searchBanner.svg");
-                border-style: none;
-                
-                &:hover {
-                    cursor: pointer;
-                }
+            @include mobile {
+                @include bgImg(16px, 16px, "~@/assets/images/banner/prev_arrow.png");
+                right: 105%;
             }
         }
     }
