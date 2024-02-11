@@ -90,8 +90,8 @@
         position: relative;
 
         img {
-            width: 100%;
-            min-width: 100%;
+            width: 100dvw;
+            min-width: 100dvw;
             height: 100dvh;
             min-height: 100dvh;
             object-fit: cover;
