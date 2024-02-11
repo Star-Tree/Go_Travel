@@ -91,6 +91,9 @@
 
         img {
             width: 100%;
+            min-width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
             object-fit: cover;
 
             @include tablet {
