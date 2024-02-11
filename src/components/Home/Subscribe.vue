@@ -126,7 +126,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 24px 30px 24px 24px;
-        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 5px;
         background-color: transparent;
 
