@@ -67,14 +67,14 @@
 
                 <span>探索更多景色</span>
 
-                <img src="~@/assets/images/arrow.png" alt="文字旁的箭頭">
+                <img src="~@/assets/images/arrow.png" alt="文字旁的箭頭" loadin="lazy" />
             </div>
 
             <ul v-show="isLoad" class="explore_main_imgBlock">
                 <li v-for="(item) in exploreMainImgArray" :key="item.ScenicSpotID">
                     <router-link :to="`/landscape/${ item.ScenicSpotID }`">
                         <div class="imgContainer">
-                            <img :src="item.src" :alt="item.headText">
+                            <img :src="item.src" :alt="item.headText" loadin="lazy" />
                         </div>
 
                         <h5>{{ item.headText }}</h5>
@@ -87,7 +87,7 @@
             <li v-for="(item) in explorePureImgArray" :key="item.ScenicSpotID">
                 <router-link :to="`/landscape/${ item.ScenicSpotID }`">
                     <div class="imgContainer">
-                        <img :src="item.src" :alt="item.headText">
+                        <img :src="item.src" :alt="item.headText" loadin="lazy" />
                     </div>
 
                     <h5>{{ item.headText }}</h5>

@@ -56,7 +56,7 @@
             <div class="enjoy_text_content">
                 <p>充斥在台灣大街小巷的在地美食，融合當地生活與文化特色，發展出各式各樣風味，從銅板小吃到精緻料理，數不清的美味讓你飽餐一頓。</p>
                 <span>享受更多美味</span>
-                <img src="~@/assets/images/arrow.png" alt="文字旁的箭頭">
+                <img src="~@/assets/images/arrow.png" alt="文字旁的箭頭" loadin="lazy" />
             </div>
         </div>
 
@@ -67,14 +67,16 @@
                 @mouseenter="changeImg(index, $event)"
                 @mouseleave="recoverImg(index, $event)"
                 @click="gotoFoodsDynamicPage(item.RestaurantID)"
-            >
+                loadin="lazy"
+            />
 
             <img v-for="(item, index) in storeEnjoyImgArr" :key="item.RestaurantID"
                 :src="item.src" :alt="item.description"
                 @mouseenter="changeImg(index, $event)"
                 @mouseleave="recoverImg(index, $event)"
                 @click="gotoFoodsDynamicPage(item.RestaurantID)"
-            >
+                loadin="lazy"
+            />
         </div>
     </div>
 </template>

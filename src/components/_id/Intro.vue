@@ -58,11 +58,11 @@
 
             <div class="intro_description_pickup" @click="changeDescription">
                 <h6 v-show="!isOpen">查看更多</h6>
-                <img v-show="!isOpen" src="@/assets/images/_id/Intro/down_arrow.svg" alt="展開點擊圖示">
+                <img v-show="!isOpen" src="@/assets/images/_id/Intro/down_arrow.svg" alt="展開點擊圖示" loadin="lazy" />
 
 
                 <h6 v-show="isOpen">收起簡介</h6>
-                <img v-show="isOpen" src="@/assets/images/_id/Intro/up_arrow.svg" alt="展開點擊圖示">
+                <img v-show="isOpen" src="@/assets/images/_id/Intro/up_arrow.svg" alt="展開點擊圖示" loadin="lazy" />
             </div>
         </li>
 

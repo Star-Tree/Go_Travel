@@ -452,7 +452,8 @@
                 <div class="scrollFilterMenu-close" @click="toggleScrollFilter">
                     <img src="@/assets/images/searchResults/scrollFilterArrow.svg" 
                          alt="行動版篩選器關閉按鈕"
-                    >
+                         loadin="lazy"
+                    />
                     <span>縮小搜尋範圍</span>
                 </div>
             </div>
@@ -525,14 +526,16 @@
                 <router-link :to="`${route.path}/${item[pageDataObj.dynamicId]}`">
                     <img :src="item.Picture.PictureUrl1"
                          :alt="item.Picture.PictureDescription1"
-                    >
+                         loadin="lazy"
+                    />
                     
                     <h4>{{ item[pageDataObj.searchResultsTitleName] }}</h4>
 
                     <div class="mapAddress">
                         <img src="@/assets/images/searchResults/mapPin.svg" 
                              alt="地圖標記圖示" class="mapPin"
-                        >
+                             loadin="lazy"
+                        />
                         <span>{{ item.Address }}</span>
                     </div>
                 </router-link>
@@ -541,7 +544,8 @@
 
         <img v-show="isOpenForNoResult" class="noResult"
              src="@/assets/images/searchResults/noResult.svg" alt="搜尋不到"
-        >
+             loadin="lazy"
+        />
     </div>
 </template>
 

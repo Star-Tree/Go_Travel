@@ -61,7 +61,7 @@
     <div class="banner" v-show="isLoad">
         <img v-for="(item, index) in storeBannerImgArr" :key="item.src"
              v-show="index === storeBannerImgArrIndex"
-            :src="item.src" :alt="item.description"
+            :src="item.src" :alt="item.description" loadin="lazy"
         >
 
         <div class="banner_main">

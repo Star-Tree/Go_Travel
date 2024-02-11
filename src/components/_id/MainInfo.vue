@@ -35,7 +35,7 @@
         <ul>
             <li>
                 <div class="mainInfo_phone">
-                    <img src="@/assets/images/_id/MainInfo/contact.svg" alt="contact icon">
+                    <img src="@/assets/images/_id/MainInfo/contact.svg" alt="contact icon" loadin="lazy" />
                     <h4>聯絡方式</h4>
                 </div>
     
@@ -49,7 +49,7 @@
 
             <li v-if="route.name !== 'ActivityId'">
                 <div class="mainInfo_address">
-                    <img src="@/assets/images/_id/MainInfo/mapPin.svg" alt="mapPin icon">
+                    <img src="@/assets/images/_id/MainInfo/mapPin.svg" alt="mapPin icon" loadin="lazy" />
                     <h4>所在地址</h4>
                 </div>
 
@@ -60,7 +60,7 @@
 
             <li v-if="route.name === 'ActivityId'">
                 <div class="mainInfo_organizer">
-                    <img src="@/assets/images/_id/MainInfo/organizer.svg" alt="organizer icon">
+                    <img src="@/assets/images/_id/MainInfo/organizer.svg" alt="organizer icon" loadin="lazy" />
                     <h4>主辦單位</h4>
                 </div>
 
@@ -71,7 +71,7 @@
 
             <li v-if="(route.name === 'LandscapeId') || (route.name === 'FoodsId')">
                 <div class="mainInfo_openTime">
-                    <img src="@/assets/images/_id/MainInfo/time.svg" alt="time icon">
+                    <img src="@/assets/images/_id/MainInfo/time.svg" alt="time icon" loadin="lazy" />
                     <h4>開放時間</h4>
                 </div>
             
@@ -82,7 +82,7 @@
 
             <li v-if="route.name === 'ActivityId'">
                 <div class="mainInfo_openTime">
-                    <img src="@/assets/images/_id/MainInfo/time.svg" alt="time icon">
+                    <img src="@/assets/images/_id/MainInfo/time.svg" alt="time icon" loadin="lazy" />
                     <h4>活動日期</h4>
                 </div>
             
@@ -96,7 +96,7 @@
 
             <li v-if="route.name === 'HotelId'">
                 <div class="mainInfo_grade">
-                    <img class="grade" src="@/assets/images/_id/MainInfo/grade.png" alt="grade icon">
+                    <img class="grade" src="@/assets/images/_id/MainInfo/grade.png" alt="grade icon" loadin="lazy" />
                     <h4>旅館星級</h4>
                 </div>
             
@@ -109,7 +109,8 @@
         <img v-if="Object.keys(storeShowDynamicPageArr).length !== 0"
             :src="storeShowDynamicPageArr.Picture.PictureUrl1" 
             :alt="`${viewsName}描述 ${storeShowDynamicPageArr.Picture.PictureDescription1}`"
-        >
+            loadin="lazy"
+        />
     </div>
 </template>
 

@@ -106,7 +106,8 @@
                 <router-link :to="`${pageDataObj.indexRoute}/${ item[pageDataObj.dynamicId] }`">
                     <img :src="item.Picture.PictureUrl1" 
                          :alt="item.Picture.PictureDescription1"
-                    >
+                         loadin="lazy"
+                    />
                     <h5>{{ item[pageDataObj.searchResultsTitleName] }}</h5>
                     <p>{{ item[pageDataObj.searchResultsDescription] }}</p>
                 </router-link>

@@ -52,7 +52,7 @@
     </div>
 
     <div v-show="!storeBannerImgIsLoad" class="loading">
-        <img src="@/assets/images/loading.gif" alt="loading 動態圖">
+        <img src="@/assets/images/loading.gif" alt="loading 動態圖" loadin="lazy" />
     </div>
 </template>
 

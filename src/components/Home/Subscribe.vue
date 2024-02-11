@@ -25,7 +25,8 @@
     <div class="subscribe">
         <img src="@/assets/images/subscribe/subscribe.svg" 
              alt="訂閱資訊旁的景點圖 新北市雙溪區不厭亭"
-        >
+             loadin="lazy"
+        />
 
         <div class="subscribe_main">
             <div class="subscribe_main_text intro-text">

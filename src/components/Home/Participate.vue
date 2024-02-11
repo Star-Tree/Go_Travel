@@ -31,7 +31,8 @@
         <img v-for="(item, index) in sotreParticipateImgArr" :key="item.id"
              v-show="index === storeParticipateImgArrIndex"
             :src="item.src" :alt="item.description" class="participatePCImg"
-        >
+            loadin="lazy"
+        />
 
         <div class="participate_info intro-text">
             <div class="participate_info_header">
@@ -55,7 +56,7 @@
             <ul class="participateMobileImg">
                 <li v-for="(item) in sotreParticipateImgArr.slice(1)" :key="item.id">
                     <router-link :to="`/activity/${item.id}`" >
-                        <img :src="item.src" :alt="item.description">
+                        <img :src="item.src" :alt="item.description" loadin="lazy" />
                         <span>{{ item.title }}</span>
                     </router-link>
                 </li>

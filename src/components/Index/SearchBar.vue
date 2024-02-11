@@ -96,7 +96,7 @@
             </select>
             
             <button @click.prevent="handSearch()">
-                <img src="~@/assets/images/searchBar/search.svg" alt="搜尋圖示">
+                <img src="~@/assets/images/searchBar/search.svg" alt="搜尋圖示" loadin="lazy" />
                 <span>搜尋</span>
             </button>
         </form>

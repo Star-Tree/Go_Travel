@@ -45,7 +45,7 @@
 
             <div class="social">
                 <a href="#" class="share">
-                    <img src="@/assets/images/_id/Header/share.svg" alt="分享連結 icon">
+                    <img src="@/assets/images/_id/Header/share.svg" alt="分享連結 icon" loadin="lazy" />
                     <span>分享給旅伴</span>
                 </a>
 
@@ -57,7 +57,8 @@
 
         <button @click="isSelected" :class="['favoriteMobile', {selected: isOpen}]">
             <img src="@/assets/images/_id/Header/heart.svg" alt="收藏愛心 icon"
-                    :class="{selected: isOpen}">
+                 :class="{selected: isOpen}" loadin="lazy" 
+            />
             <span>收藏{{ viewsName }}</span>
         </button>
 
@@ -66,7 +67,8 @@
 
             <button @click="isSelected" :class="['favoritePC', {selected: isOpen}]">
                 <img src="@/assets/images/_id/Header/heart.svg" alt="收藏愛心 icon"
-                     :class="{selected: isOpen}">
+                     :class="{selected: isOpen}" loadin="lazy"
+                />
                 <span>收藏{{ viewsName }}</span>
             </button>
         </div>
