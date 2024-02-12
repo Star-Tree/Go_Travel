@@ -246,7 +246,7 @@
         justify-content: center;
         align-items: center;
         padding: 8px 38px;
-        border: 0.5px solid #769763;
+        border: 1px solid #769763;
         border-radius: 5px;
         background-color: white;
         color: #769763;
