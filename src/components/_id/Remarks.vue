@@ -102,6 +102,8 @@
         a {
             align-self: center;
             margin-right: 17vw;
+            word-break: break-all;
+            -webkit-hyphens: auto;
             
             @include tablet {
                 margin-right: 6vw;
