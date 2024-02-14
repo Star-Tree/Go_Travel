@@ -23,7 +23,7 @@
 
 <template>
     <div class="subscribe">
-        <img src="@/assets/images/subscribe/subscribe.svg" 
+        <img src="@/assets/images/subscribe/subscribe.jpg" 
              alt="訂閱資訊旁的景點圖 新北市雙溪區不厭亭"
              loadin="lazy"
         />
@@ -68,16 +68,19 @@
             width: 50%;
             margin-right: 32px;
             object-fit: cover;
+            border-radius: 8px;
 
             @include tablet {
                 width: 100%;
                 height: 407px;
                 margin: 0 0 32px 0;
+                border-radius: 0 0 8px 8px;
             }
 
             @include mobile {
                 height: 300px;
                 margin: 0 0 48px 0;
+                border-radius: 0; 
             }
         }
 

@@ -1,6 +1,6 @@
 export const participateImg = [
   {
-    src: require("@/assets/images/participate/default.svg"),
+    src: require("@/assets/images/participate/default.jpg"),
     title: "",
     description: "高雄市三鳳宮",
     id: "預設圖片",
