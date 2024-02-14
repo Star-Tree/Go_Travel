@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c5b2c"],{"3fcf":function(c,e,n){"use strict";n.r(e);var t=n("7a23"),a=n("32d5"),o=n("e590"),b=n("5c40"),d=n("6605"),s=n("5502"),j={__name:"index",setup(c){const e=Object(s["b"])(),n=Object(d["d"])();return Object(b["C"])(()=>{e.dispatch("Home/handBannerImgIsLoadInit",!0),n.afterEach((c,e)=>window.scrollTo(0,0))}),(c,e)=>(Object(t["x"])(),Object(t["f"])(t["a"],null,[Object(t["j"])(a["a"]),Object(t["j"])(o["a"])],64))}};const i=j;e["default"]=i}}]);
+//# sourceMappingURL=chunk-2d0c5b2c.63e32e09.js.map
