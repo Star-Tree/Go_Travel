@@ -44,6 +44,7 @@
   #### Map: [@googlemaps/js-api-loader](https://github.com/googlemaps/js-api-loader)
 ---
 * ### APIs:
+  * #### Native: Intersection Observer API
   * #### User-Defined:
     ##### (in src/composition-api/index.js)
     * ##### `useHandImgLoad`: Load Images<br><br>
